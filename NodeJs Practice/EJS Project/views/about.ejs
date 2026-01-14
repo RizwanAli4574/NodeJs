@@ -1,38 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= title %></title>
-</head>
-<body>
-    <h1><%= title %></h1>
-   <!-- <% if(message){ %>
-    <p><%= message %></p>
-    <% }else { %>
-    <p>No message</p>
-    <% } %> -->
+<%- include('header') %>
+      <div class="row">
+        <div class="col-6">
+          <h4><%= title %></h4>
 
-    
-    <!-- <ul>
-        <% items.forEach(item => { %>
-        <li><%= item  _%></li>
-        <% }) %>
-    </ul> -->
-
-    <table border="1" width="500px">
-        <tr>
-            <th>Name</th>
-            <th>Age</th>
-            <th>City</th>
-        </tr>
-        <% items.forEach(item => { %>
-        <tr>
-            <td><%= item.name  _%></td>
-            <td><%= item.age  _%></td>
-            <td><%= item.city  _%></td>
-        </tr>
-        <% }) %>
-    </table>
-</body>
-</html>
+          <table class="table">
+            <tr>
+              <th>Name</th>
+              <th>Age</th>
+              <th>City</th>
+            </tr>
+            <% items.forEach(item => { %>
+            <tr>
+              <td><%= item.name _%></td>
+              <td><%= item.age _%></td>
+              <td><%= item.city _%></td>
+            </tr>
+            <% }) %>
+          </table>
+        </div>
+        <div class="col-6">
+            <img src="images/flower.jfif" alt="">
+        </div>
+      </div>
+  <%- include('footer') %> 
